@@ -21,7 +21,7 @@
 :revnumber: 0.1
 :revdate: 
 
-sources = stylesheets/defaults-style.css
+sources = stylesheets/default-style.css
 
 = asciidocの使い方
 
