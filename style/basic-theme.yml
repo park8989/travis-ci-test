@@ -20,4 +20,17 @@ link:
 outline_list:
   indent: $base_font_size * 1.5
   
+footer:
+  height: 0.75in
+  line_height: 1.2
+  recto:
+    right:
+      content: |
+        Section Title - Page Number +
+        {section-or-chapter-title} - {page-number}
+  verso:
+    left:
+      content: |
+        Page Number - Chapter Title +
+        {page-number} - {chapter-title}  
   
