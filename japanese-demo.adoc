@@ -21,7 +21,7 @@
 :revnumber: 0.1
 :revdate: 
 
-sources = stylesheets/default-style.css
+sources = style/default-theme.yml
 
 = asciidocの使い方
 
@@ -59,9 +59,11 @@ asciidocとは [blue]#軽量マークアップ言語# です
 
 === asciidoctorだとPlantUMLでシーケンス図作成
 
-[plantuml]
+[plantuml, sample, png]
 ----
+@startuml
 actor ユーザー as user
 user -> ログイン : ログインする
 ログイン --> user:
+@enduml
 ----
