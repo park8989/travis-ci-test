@@ -22,7 +22,7 @@
 :revdate: 
 
 resources/
- theme/
+ themes/
   basic-theme.yml
 
 = asciidocの使い方
@@ -31,10 +31,13 @@ resources/
 
 asciidocとは [blue]#軽量マークアップ言語# です
 
-詳しくは<<can_asciidoc,asciidocでできること>>を参照
+詳しくは<<can_asciidoc,asciidocでできること>>を参照 +
 
 // 改ページ
+
+
 <<<
+
 
 [[can_asciidoc]]
 == asciidocでできること
