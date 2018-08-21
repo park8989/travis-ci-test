@@ -21,7 +21,9 @@
 :revnumber: 0.1
 :revdate: 
 
-sources = style/default-theme.yml
+resources/
+ theme/
+  basic-theme.yml
 
 = asciidocの使い方
 
@@ -30,6 +32,9 @@ sources = style/default-theme.yml
 asciidocとは [blue]#軽量マークアップ言語# です
 
 詳しくは<<can_asciidoc,asciidocでできること>>を参照
+
+// 改ページ
+<<<
 
 [[can_asciidoc]]
 == asciidocでできること
