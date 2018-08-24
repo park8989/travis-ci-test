@@ -11,13 +11,11 @@
 A simple http://asciidoc.org[AsciiDoc]
 document.
 == Introduction
-A paragraph followed by a simple list with
-square bullets.
+はじめに段落の箇条書きの簡単なリスト。
 [square]
 * item 1
 * item 2
-Here's how you say "`Hello,
-World!`" in Prawn:
+Here's how you say "`Hello,World!`" in Prawn:
 .Create a basic PDF document using Prawn
 [source,ruby]
 ----
