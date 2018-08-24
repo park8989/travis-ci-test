@@ -1,5 +1,5 @@
 = Document Title
-:lang: jp
+:lang: ja
 :doctype: book
 :reproducible:
 //:source-highlighter: coderay
