@@ -7,7 +7,6 @@
 :revdate: 2018/9/7
 :sectnums: 
 :chapter-label: 
-
 // Table of Contents
 // toc: デフォルトはleft toclevel は目次の表示階層レベル（デフォルト2、最大4）
 :toc: 
