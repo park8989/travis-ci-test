@@ -1,29 +1,22 @@
-sudo: required
-
-services:
-  - docker
-  
+sudo: false
+git:
+  # use depth 2 just in case two refs get pushed at once (like a tag)
+  depth: 2
+language: ruby
+cache: bundler
+bundler_args: --path=.bundle/gems
+rvm:
+- &release_ruby 2.4.1
+- 2.1.10
+- 2.0.0
+- 1.9.3
 before_install:
-  - mkdir -p output
-  - docker pull asciidoctor/docker-asciidoctor  
-
-script:
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -D /documents/output *.
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -D /documents/output  
-  
-after_error:
-  - docker logs asciidoc-to-html
-  - docker logs asciidoc-to-pdf  
-
-after_failure:
-  - docker logs asciidoc-to-html
-  - docker logs asciidoc-to-pdf  
-  
-after_success:
-  - cd output ; mv README.html index.html ; cp -R ../images images
-  - git init  
-  - git config user.name "${GH_USER_NAME}" 
-  - git config user.email "{GH_USER_EMAIL}"  
-  - git add . ; git commit -m "Deploy to GitHub Pages"  
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1  
-  
+- gem update bundler
+- gem cleanup bundler
+script: bundle exec gem which prawn
+deploy:
+  provider: rubygems
+  on:
+    tags: true
+    repo: travis-ci-test
+    rvm: *release_ruby
