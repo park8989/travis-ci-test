@@ -1,0 +1,31 @@
+:lang: ja
+= ドキュメントタイトル
+Doc Writer <doc@example.com>
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: リスト
+
+簡単な http://asciidoc.org[Asciidoc]ドキュメント
+
+== はじめに
+
+段落に四角い箇条書きのある単純なリスト
+
+[square]
+
+* アイテム　１
+* アイテム　２
+
+あなたが「こんにちは、世界！」:
+
+.Prawnを使って基本的なPDF文書を作成する
+[source, ruby]
+----
+require 'prawn'
+
+Prawn::Document.generate 'example.pdf' do
+  text 'Hello, World'
+end
+----
+
