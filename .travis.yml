@@ -2,7 +2,7 @@ sudo: false
 git:
   # use depth 2 just in case two refs get pushed at once (like a tag)
   depth: 2
-language: ruby
+language: jruby
 cache: bundler
 bundler_args: --path=.bundle/gems
 rvm:
