@@ -19,7 +19,7 @@ Doc Writer <doc@example.com>
 
 あなたが「こんにちは、世界！」:
 
-.Prawnを使って基本的なPDF文書を作成する
+.Prawnを使って基本的なPDF文書を作成する[[list1]]
 [source, ruby]
 ----
 require 'prawn'
@@ -29,3 +29,4 @@ Prawn::Document.generate 'example.pdf' do
 end
 ----
 
+<<list1, 参照>>
