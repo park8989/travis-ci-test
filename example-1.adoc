@@ -5,6 +5,10 @@ Doc Writer <doc@example.com>
 :reproducible:
 :source-highlighter: rouge
 :listing-caption: リスト
+:chapter-label:
+:toc:
+:toclevels: 2
+:toc-title: 目次
 
 簡単な http://asciidoc.org[Asciidoc]ドキュメント
 
@@ -29,4 +33,20 @@ Prawn::Document.generate 'example.pdf' do
 end
 ----
 
-<<list1, 参照>>
+== 相互リンク
+
+<<list1, 参照>> +
+
+'''
+
+image::http://asciidoctor.org/images/octocat.jpg[GitHub mascot]
+
+image:icons/play.png[Play, title="Play"] play
+
+
+image:icons/pause.png[title="Pause"] stop
+
+
+
+
+
